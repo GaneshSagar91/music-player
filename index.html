@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="music.css">
+  <title>Spotify</title>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <img src="logo.png" class="logo">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">SPECIFICATIONS</a></li>
+        <li><a href="">PRODUCTS</a></li>
+        <li><a href="">CONNECT</a></li>
+      </ul>
+    </nav>
+    <div class="heading">
+      <h1>The <br>Real <br>Sound</h1>
+      <div class="play">
+        <p>Chaleya....</p>
+      <img src="play.png" id="logo">
+      </div>
+    </div>
+    <audio src="Chaleya(PagalWorld.com.se).mp3" id="mysong"></audio>
+  </div>
+  <script>
+    var mySong = document.getElementById("mysong");
+    var logo = document.getElementById("logo");
+
+    logo.onclick=function()
+    {
+      if(mySong.paused)
+      {
+        mySong.play();
+        logo.src="pause.png";
+      }
+      else{
+        mySong.pause();
+        logo.src="play.png";
+      }
+    }
+
+  </script>
+</body>
+</html>
